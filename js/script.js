@@ -1,7 +1,9 @@
 const toggleMenuElement = document.getElementById("nav-toggle");
 const mainMenuElement = document.getElementById("container-nav");
+const mainMenuItems = document.getElementById("nav-items")
 const blackScreen = document.getElementById("black-screen")
 const toggleClass = document.querySelector('.fa-bars')
+
 let boolean = false;
 
 toggleMenuElement.addEventListener('click',()=>{
@@ -22,4 +24,17 @@ blackScreen.addEventListener('click', ()=>{
     blackScreen.style.display ="none";
     toggleClass.classList.replace('fa-times', 'fa-bars');
     boolean = false;
-})
+});
+
+window.addEventListener('scroll', () => {
+    const scrollY = window.pageYOffset;
+    const sectionHeight = document.getElementById('footer-area').offsetHeight;
+    const sectionTop = document.getElementById('footer-area').offsetTop;
+
+    if (scrollY > sectionTop - sectionHeight - 250){
+        console.log('ye')
+        mainMenuItems.style.opacity ="0%";
+    }else{
+        mainMenuItems.style.opacity ="100%";
+    };
+});

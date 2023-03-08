@@ -67,10 +67,6 @@ a{
     color:rgb(176, 205, 115) ;
     box-shadow: -7px 7px 0px 7px rgb(42, 38, 57)
 }
-header {
-    position: fixed;
-    z-index: 100;
-}
 
 .container-nav{
     background-color: #2a2639;
@@ -101,12 +97,16 @@ header {
     list-style: none;
     transition: .5s;
 }
+.nav-items{
+    transition: .7s;
+}
 .nav-links a:hover{
     color: #a6b7cf;
 }
 .nav-toggle{
     display: none;
     position: fixed;
+    z-index: 10;
     color: #ffff;
     background: #2a2639;
     width: 100%;
@@ -117,7 +117,7 @@ header {
 }
 .black-screen{
     display: none;
-    z-index: -1;
+    z-index: 1;
     position: fixed;
     top:0;
     left: 0;
@@ -258,7 +258,7 @@ header {
 }
 .education-items{
     padding: 0 30px;
-    margin: 20px 0;
+    margin: 25px 0px;
     background-color: rgb(42, 38, 57);
     display: flex;
     flex-wrap: wrap;
@@ -268,10 +268,8 @@ header {
     border-radius: 15px;
 }
 .education-text{
-    display: flex;
-    flex-wrap: wrap;
-    width: 400px;
-    line-height: 30px;
+    width: 500px;
+    line-height: 10px;
 }
 .education-text h3,h4{
     line-height: 40px;
@@ -422,5 +420,9 @@ header {
     }
     .nav-toggle{
         display: flex;
+    }
+    .nav-links a, li{
+        font-size: 24px;
+        line-height: 40px;
     }
 }
