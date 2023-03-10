@@ -430,7 +430,12 @@ a{
     .nav-image{
         display: none;
     }
-    .education-container{
+    .education-text{
+        padding: 10px;
+        width: 100%;
+    }
+    .project-area-container{
+        width:100%;
         text-align: center;
         padding: 0px 50px;
     }
