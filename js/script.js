@@ -1,46 +1,47 @@
 const toggleMenuElement = document.getElementById("nav-toggle");
 const mainMenuElement = document.getElementById("container-nav");
-const mainMenuItems = document.getElementById("nav-items")
 const blackScreen = document.getElementById("black-screen")
-const toggleClass = document.querySelector('.fa-bars')
-const cardImage = document.getElementsByClassName('project-card-image');
-const projectCardElement = document.getElementsByClassName('project-card');
-const projectTitleElement = document.getElementsByClassName('project-title')
 
-console.log(projectTitleElement)
-
-let boolean = false;
+let sideNav = false;
+function showSideNav(){
+    mainMenuElement.style.left = "0";
+    blackScreen.style.display ="block";
+    toggleMenuElement.lastElementChild.classList.replace('fa-bars', 'fa-times')
+    sideNav = true;
+}
+function toggleSideNav(){
+    mainMenuElement.style.left = "-350px";
+    blackScreen.style.display ="none";
+    toggleMenuElement.lastElementChild.classList.replace('fa-times', 'fa-bars');
+    sideNav = false;
+}
 
 toggleMenuElement.addEventListener('click',()=>{
-    if (boolean == false){
-        mainMenuElement.style.left = "0";
-        blackScreen.style.display ="block";
-        toggleClass.classList.replace('fa-bars', 'fa-times');
-        boolean = true;
+    if (sideNav == false){
+        showSideNav()
     } else {
-        mainMenuElement.style.left = "-350px";
-        blackScreen.style.display ="none";
-        toggleClass.classList.replace('fa-times', 'fa-bars');
-        boolean = false;
+        toggleSideNav()
     }
 });
 blackScreen.addEventListener('click', ()=>{
-    mainMenuElement.style.left = "-350px";
-    blackScreen.style.display ="none";
-    toggleClass.classList.replace('fa-times', 'fa-bars');
-    boolean = false;
+    toggleSideNav()
 });
 
+if (window.matchMedia("(max-width: 600px)").matches) {
+    mainMenuElement.addEventListener('click', ()=>{
+    toggleSideNav()
+    })
+ }
+
+ 
 window.addEventListener('scroll', () => {
     const scrollY = window.pageYOffset;
     const sectionHeight = document.getElementById('footer-area').offsetHeight;
     const sectionTop = document.getElementById('footer-area').offsetTop;
-
     if (scrollY > sectionTop - sectionHeight - 250){
-        console.log('ye')
-        mainMenuItems.style.opacity ="0%";
+        mainMenuElement.lastElementChild.style.opacity="0%";
     }else{
-        mainMenuItems.style.opacity ="100%";
+        mainMenuElement.lastElementChild.style.opacity="100%";
     };
 });
 

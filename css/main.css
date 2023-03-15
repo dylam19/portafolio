@@ -70,6 +70,7 @@ a{
 }
 
 .container-nav{
+    z-index: 10;
     background-color: #2a2639;
     position: fixed;
     display: flex;
@@ -430,12 +431,7 @@ a{
     .nav-image{
         display: none;
     }
-    .education-text{
-        padding: 10px;
-        width: 100%;
-    }
-    .project-area-container{
-        width:100%;
+    .education-container{
         text-align: center;
         padding: 0px 50px;
     }
@@ -444,13 +440,11 @@ a{
         text-align: center;
         padding: 0px 50px;
     }
-     .skill-card-container{
+    .skill-card-container{
         margin: 0 50px;
     }
-    .education-images{
-        display: none;
-    }
     .education-text{
+        padding: 10px;
         width: 100%;
     }
     .project-area-container{
