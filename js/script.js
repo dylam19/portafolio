@@ -18,7 +18,7 @@ function toggleSideNav(){
     sideNav = false;
 }
 
-toggleMenuElement.addEventListener('click',()=>{
+toggleMenuElement.lastElementChild.addEventListener('click',()=>{
     if (sideNav == false){
         showSideNav()
     } else {
