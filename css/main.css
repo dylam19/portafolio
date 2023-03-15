@@ -85,6 +85,9 @@ a{
     flex-direction: column;
     transition: .5s;
 }
+.active{
+    color: #b0cd73;
+}
 .nav-image{
     display: flex;
 }
@@ -369,6 +372,11 @@ a{
     justify-content: center;
     align-items: center;
     flex-direction: column;
+}
+.footer-container p{
+    word-spacing: 50px;
+    color: #ffff;
+    opacity: .3;
 }
 .footer-text{
     margin-top:20px;
