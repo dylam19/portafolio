@@ -130,8 +130,12 @@ a{
     font-size: 40px;
     padding-right: 30px;
 }
-.nav-toggle img{
+.nav-toggle a{
     padding: 20px;
+    height: 80%;
+}
+.nav-toggle img{
+    padding: 10px;
     height: 80%;
 }
 .black-screen{
