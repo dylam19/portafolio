@@ -2,6 +2,7 @@ html{
     scroll-behavior:smooth;
 }
 body{
+    background-color:#312b45 ;
     padding-left: 200px;
     position: absolute;
     font-family: 'ubuntu', sans-serif;
@@ -43,9 +44,11 @@ h2{
 }
 h3{
     font-size: 24px;
+    color: #5d98bc;
 }
 h4{
     font-size: 16px;
+    color: #5d98bc;
 }
 a{
     font-size: 18px;
@@ -156,9 +159,6 @@ a{
 }
 .main-area-container a{
     text-decoration: none;
-}
-.main-area-container h3,h4{
-    color: #5d98bc;
 }
 .main-social{
     border-radius: 100%;
@@ -363,43 +363,53 @@ a{
 .footer-container{
     display: flex;
     background-color: #2a2639;
-
     flex-wrap: wrap;
-    align-items: flex-end;
-    justify-content: space-between;
+    height: 100%;
+    padding: 50px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 .footer-text{
-    margin-top:50px;
-    margin-bottom: 10px;
+    margin-top:20px;
     display: flex;
-    flex-direction: column;
-    padding-left: 30px;
-    width: 200px;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+    width: 450px;
+    justify-content: center;
 }
 .footer-text a{
     color: #62afd0;
-    line-height: 50px;
+    line-height: 15px;
     font-size: 24px;
     text-decoration: none;
     transition: .5s;
+    margin: 10px;
+    font-weight: 400;
 }
 .footer-text a:hover{
-    font-size: 28px;
+    transform: scale(1.1);
     color: #b0cd73;
 }
-.footer-social {
-    padding-right: 30px;
+.footer-social ul{
+    display: flex;
+    list-style: none;
+    padding: 0;
+}
+.footer-social{
     margin-top:50px;
     margin-bottom: 10px;
 }
+
 .footer-social a{
-    text-indent: 10px;
+    text-indent: 20px;
     color: #62afd0;
     font-size: 30px;
     transition: .5s;
+    line-height: 15px;
 }
-.footer-social a:hover{
-    font-size: 35px;
+.footer-social li:hover, a:hover{
+    transform: scale(1.1);
     color: #b0cd73;
 }
 
