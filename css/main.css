@@ -118,7 +118,7 @@ a{
 .nav-toggle{
     display: none;
     position: fixed;
-    z-index: 10;
+    z-index: 12;
     background: #2a2639;
     width: 100%;
     align-items: center;
@@ -447,7 +447,7 @@ a{
         justify-content: center;
     }
     .container-nav{
-        z-index: 100;
+        z-index: 10;
         left: -350px;
     }
     .nav-image{
