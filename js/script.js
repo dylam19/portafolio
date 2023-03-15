@@ -25,6 +25,9 @@ toggleMenuElement.lastElementChild.addEventListener('click',()=>{
         toggleSideNav()
     }
 });
+toggleMenuElement.firstElementChild.addEventListener('click', ()=>{
+    toggleSideNav()
+})
 blackScreen.addEventListener('click', ()=>{
     toggleSideNav()
 });
