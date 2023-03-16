@@ -3,8 +3,8 @@ const mainMenuElement = document.getElementById("container-nav");
 const blackScreen = document.getElementById("black-screen")
 const sectionAll = document.querySelectorAll('section[id]');
 
-
 let sideNav = false;
+
 function showSideNav(){
     mainMenuElement.style.left = "0";
     blackScreen.style.display ="block";
@@ -27,7 +27,8 @@ toggleMenuElement.lastElementChild.addEventListener('click',()=>{
 });
 toggleMenuElement.firstElementChild.addEventListener('click', ()=>{
     toggleSideNav()
-})
+});
+
 blackScreen.addEventListener('click', ()=>{
     toggleSideNav()
 });
